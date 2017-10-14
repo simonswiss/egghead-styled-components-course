@@ -4,6 +4,7 @@ import "./App.css";
 
 const Button = styled.button`
   background: #a965cc;
+  margin: 6px;
   border: none;
   padding: 0.85rem 1.5rem 0.75rem;
   font-size: 0.9rem;
@@ -16,11 +17,13 @@ const Button = styled.button`
   &:hover {
     border-bottom-width: 3px;
     transform: translateY(2px);
+    margin-bottom: 8px;
   }
 
   &:active {
     border-bottom-width: 1px;
     transform: translateY(4px);
+    margin-bottom: 10px;
   }
 
   &:focus {
