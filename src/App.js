@@ -3,8 +3,8 @@ import styled from "styled-components";
 import "./App.css";
 
 const Button = styled.button`
-  margin: 6px;
   border: none;
+  margin: 6px;
   padding: 0.85rem 1.5rem 0.75rem;
   font-size: 0.9rem;
   font-weight: 700;
