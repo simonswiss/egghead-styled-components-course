@@ -17,10 +17,11 @@ const ProgressWrapper = styled.div`
 const Progress = styled.div`
   position: absolute;
   background: #a965cc;
+  width: ${props => `${props.progress / props.target * 100}%`};
   top: 0;
   left: 0;
   height: 100%;
-  width: 40%;
+  transition: width 0.15s ease-in-out;
 `;
 
 // width: ${props => props.status / props.target}
@@ -53,7 +54,7 @@ export default class extends Component {
         <Button onClick={() => this.updateProgress(-1)}>-1</Button>
         <Button onClick={() => this.updateProgress(1)}>+1</Button>
         <ProgressWrapper>
-          <Progress value={progress} target={target} />
+          <Progress progress={progress} target={target} />
         </ProgressWrapper>
         <InfoList>
           <InfoItem label="Current" value={progress} />
