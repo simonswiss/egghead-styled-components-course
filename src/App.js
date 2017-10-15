@@ -16,12 +16,13 @@ const ProgressWrapper = styled.div`
 
 const Progress = styled.div`
   position: absolute;
-  background: #a965cc;
+  background: ${props =>
+    props.progress === props.target ? "limegreen" : "#a965cc"};
   width: ${props => `${props.progress / props.target * 100}%`};
   top: 0;
   left: 0;
   height: 100%;
-  transition: width 0.15s ease-in-out;
+  transition: all 0.2s ease-in-out;
 `;
 
 // width: ${props => props.status / props.target}
@@ -57,7 +58,7 @@ export default class extends Component {
           <Progress progress={progress} target={target} />
         </ProgressWrapper>
         <InfoList>
-          <InfoItem label="Current" value={progress} />
+          <InfoItem label="Points" value={progress} />
           <InfoItem label="Target" value={target} />
         </InfoList>
       </div>
